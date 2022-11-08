@@ -6,25 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/resultLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputText" />
+        android:layout_marginBottom="30dp"
+        android:text="Result"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/resultTextView"
+        app:layout_constraintEnd_toEndOf="@+id/resultTextView"
+        app:layout_constraintStart_toStartOf="@+id/resultTextView" />
 
-    <EditText
-        android:id="@+id/inputText"
+    <TextView
+        android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="center_horizontal|center_vertical"
-        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Connect to service"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/getResultButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/getResultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get result"
+        app:layout_constraintBottom_toBottomOf="@+id/connectButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/connectButton"
+        app:layout_constraintTop_toTopOf="@+id/connectButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
