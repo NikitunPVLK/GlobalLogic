@@ -1,14 +1,20 @@
 // IRobotVacuumCleanerInterface.aidl
 package com.example.task1;
 
-// Declare any non-default types here with import statements
+import com.example.task1.IChangePositionCallback;
 
 interface IRobotVacuumCleanerInterface {
-    oneway boolean subscribeOnPositionChange(IChangePositionCallback onPositionChanged);
-    oneway boolean start();
-    oneway boolean stop();
-    oneway boolean pause();
-    oneway boolean resume();
-    oneway boolean returnToStation(); 
-    oneway boolean changeCleaningMode(int mode);
+    boolean subscribeOnPositionChange(IChangePositionCallback onPositionChanged);
+    boolean start();
+    boolean stop();
+    boolean pause();
+    boolean resume();
+    boolean returnToStation();
+    /**
+    * mode:
+    * 0 - silent,
+    * 1 - standard,
+    * 2 - powerful
+    */
+    boolean changeCleaningMode(int mode);
 }
